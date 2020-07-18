@@ -1,0 +1,151 @@
+\ProvidesPackage{myStyle}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	PAGE DIMENSIONS (SKINNY LETTERPAPER, 10pt font)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\topmargin=-36pt
+\textheight=654pt
+\textwidth=346pt
+\oddsidemargin=-36pt
+\evensidemargin=-36pt
+\marginparwidth=0pt
+\marginparsep=36pt
+\paperwidth=418pt
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	PACKAGES 	%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage[shortlabels]{enumitem}
+\usepackage{url}
+\usepackage{mathtools}
+\usepackage{xifthen} %if else commands
+\usepackage{mathrsfs}
+\usepackage{scrextend} %Koma
+\usepackage{tikz}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{cd}
+
+
+\usepackage[english]{babel}
+\usepackage{inputenc}
+\usepackage{fourier} %font
+% \usepackage{ulem}
+
+%%%%%%%%%%%%%%%%%%%
+%	NEW COMMANDS	%%%%%%%%
+%%%%%%%%%%%%%%%%%%%
+
+% BRACKETS
+\newcommand{\set}[1]{\left\{ #1 \right\}}	
+\newcommand{\br}[1]{\left( #1 \right )}
+\newcommand{\sqbr}[1]{\left[ #1 \right ]}
+\newcommand{\abs}[1]{\left| #1 \right |}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
+\newcommand{\angl}[1]{\left < \;  #1 \; \right >}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+% NUMBER SETS
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\N}{\mathbb N}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+	
+% DIFFERENTIAL OPERATROR
+\newcommand{\ud}{\;\mathrm d}
+	
+% MATHAND
+\newcommand{\mathand}{\qquad \text{and} \qquad}
+	
+% OVERLINE UNDERLINE
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\ul}[1]{\underline{#1}}
+\renewcommand{\tilde}[1]{\widetilde{#1}}
+
+% Redfeine left and right brackets for better spacing around operators
+\let\originalleft\left
+\let\originalright\right
+\renewcommand{\left}{\mathopen{}\mathclose\bgroup\originalleft}
+\renewcommand{\right}{\aftergroup\egroup\originalright}
+
+% \let\emph\relax
+% \DeclareTextFontCommand{\emph}{\bfseries}
+
+
+%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%
+%	MATH OPERATORS 	%%%%%%%%
+%%%%%%%%%%%%%%%%%%%
+\let\Re\relax
+\let\Im\relax
+\DeclareMathOperator{\Re}{Re}
+\DeclareMathOperator{\Im}{Im}
+
+\DeclareMathOperator{\diam}{diam}
+%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	CUSTOM ENVIRONMENTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newenvironment{pb}[1][]
+{\par\medskip\noindent\textbf{Problem #1:}\enspace}
+%{\smallskip\noindent\dotfill}
+{\medskip}
+ 
+\newenvironment{soln}
+{\par\medskip\textit{Solution:}\enspace}
+{}
+
+\newenvironment{defn}[1][]
+{\par\medskip\noindent\textbf{Definition:}%\ifthenelse{\isempty{#1}}{:}{\quad\textsl{#1}:}
+\enspace}
+{\medskip}
+   
+\newenvironment{eg}[1][]
+{\par\medskip\noindent\textit{Example:}%\ifthenelse{\isempty{#1}}{:}{\quad\textsl{#1}:}
+\enspace}
+{\medskip}
+
+\newenvironment{rmk}[1][]
+{\par\medskip\noindent\textbf{Remark:}%\ifthenelse{\isempty{#1}}{:}{\quad\textsl{#1}:}
+\enspace}
+{\medskip}
+   
+\newenvironment{thm}[1][]
+{\par\medskip\noindent\textbf{Theorem}\ifthenelse{\isempty{#1}}{:}{\quad\textbf{(#1)}:}
+\enspace}
+{\medskip}
+
+\newenvironment{cor}[1][]
+{\par\medskip\noindent\textbf{Corollary}\ifthenelse{\isempty{#1}}{:}{\quad\textbf{(#1)}:}
+\enspace}
+{\medskip}
+
+\newenvironment{lemma}[1][]
+{\par\medskip\noindent\textbf{Lemma}\ifthenelse{\isempty{#1}}{:}{\quad\textbf{(#1)}:}
+\enspace}
+{\medskip}
+
+\newenvironment{prop}[1][]
+{\par\medskip\noindent\textbf{Proposition}\ifthenelse{\isempty{#1}}{:}{\quad\textbf{(#1)}:}
+\enspace}
+{\medskip}
+ 
+\newenvironment{pf}
+{\par\medskip\textit{Proof:}\enspace}
+{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
