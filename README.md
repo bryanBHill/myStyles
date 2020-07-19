@@ -1,3 +1,3 @@
 # myStyles
 
-A simple LaTeX environment I use for all my school notes and assignments.
+A simple LaTeX environment I use for my school notes and assignments.
